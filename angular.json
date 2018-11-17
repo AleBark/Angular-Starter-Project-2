@@ -23,9 +23,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/tether/dist/js/tether.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -114,7 +119,7 @@
             "devServerTarget": "app2:serve"
           },
           "configurations": {
-            "production": {
+            "production": { 
               "devServerTarget": "app2:serve:production"
             }
           }
