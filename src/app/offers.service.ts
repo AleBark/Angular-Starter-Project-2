@@ -51,6 +51,12 @@ export class OffersSerice {
         ]
     }];
 
+    public getOffersPromoise(): Promise<Offer[]> {
+        return new Promise((resolve, reject) => {
+            resolve(this.offers);
+        });
+    }
+
     public getOffers(): Array<Offer> {
         return this.offers;
     }

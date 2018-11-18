@@ -19,8 +19,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.offers = this.offerService.getOffers();
-    console.log(this.offers);
-  }
+    // 0 Latency
+    // this.offers = this.offerService.getOffers();
 
-}
+    this.offerService.getOffersPromoise()
+    .then((offers: Array<Offer>) => {
+      this.offers = offers;
+      console.log(this.offers);
+    });
+    }
+
+  }
