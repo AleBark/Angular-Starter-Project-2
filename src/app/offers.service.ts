@@ -1,6 +1,57 @@
+import { Offer } from './shared/offer.model';
+
 export class OffersSerice {
 
-    public getOffers(): Array<String> {
-        return ['Dishcloth-01', 'Dishcloth-02', 'Dishcloth-03'];
+    public offers = [{
+        id: 1,
+        category: 'Cotton',
+        title: 'Smooth dishcloth',
+        description: 'Super smooth dishcloth!',
+        advertiser: 'Uncle Ben',
+        price: 9.90,
+        highlight: true,
+        images: [
+            { url: '/assets/offers/1/img1.jpg' },
+            { url: '/assets/offers/1/img2.jpg' },
+            { url: '/assets/offers/1/img3.jpg' },
+            { url: '/assets/offers/1/img4.jpg' }
+        ]
+    },
+    {
+        id: 2,
+        category: 'Leather',
+        title: 'Resistant dishcloth',
+        description: 'Super resistant dishcloth!',
+        advertiser: 'Aunt Marie',
+        price: 12.90,
+        highlight: true,
+        images: [
+            { url: '/assets/offers/2/img1.jpg' },
+            { url: '/assets/offers/2/img2.jpg' },
+            { url: '/assets/offers/2/img3.jpg' },
+            { url: '/assets/offers/2/img4.jpg' }
+        ]
+
+    },
+    {
+        id: 4,
+        category: 'Nylon',
+        title: 'Durable dishcloth',
+        description: 'Super durable dishcloth!',
+        advertiser: 'Grandma Lola',
+        price: 15.90,
+        highlight: true,
+        images: [
+            { url: '/assets/offers/3/img1.jpg' },
+            { url: '/assets/offers/3/img2.jpg' },
+            { url: '/assets/offers/3/img3.jpg' },
+            { url: '/assets/offers/3/img4.jpg' },
+            { url: '/assets/offers/3/img5.jpg' },
+            { url: '/assets/offers/3/img6.jpg' }
+        ]
+    }];
+
+    public getOffers(): Array<Offer> {
+        return this.offers;
     }
 }
