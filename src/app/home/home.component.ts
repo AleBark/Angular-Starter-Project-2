@@ -23,10 +23,15 @@ export class HomeComponent implements OnInit {
     // this.offers = this.offerService.getOffers();
 
     this.offerService.getOffersPromoise()
-    .then((offers: Array<Offer>) => {
+    .then(
+      (offers: Array<Offer>) => {
       this.offers = offers;
       console.log(this.offers);
+    },
+    (somethingWrongHere: any) => {
+      console.log(somethingWrongHere);
     });
+
     }
 
   }

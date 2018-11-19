@@ -53,7 +53,13 @@ export class OffersSerice {
 
     public getOffersPromoise(): Promise<Offer[]> {
         return new Promise((resolve, reject) => {
+
+          if (false) {
             resolve(this.offers);
+          } else {
+            reject({status: 404, msg: '404 Not Found'});
+          }
+
         });
     }
 
