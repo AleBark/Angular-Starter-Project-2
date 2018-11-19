@@ -54,12 +54,15 @@ export class OffersSerice {
     public getOffersPromoise(): Promise<Offer[]> {
         return new Promise((resolve, reject) => {
 
-          if (false) {
+          if (true) {
             resolve(this.offers);
           } else {
             reject({status: 404, msg: '404 Not Found'});
           }
-
+        }).then((offers: Array<Offer>) => {
+          console.log('Doing something with this result before send it.' +
+          'It is possible to chain those `then` methods, and use them as many times as necessary');
+          return offers;
         });
     }
 

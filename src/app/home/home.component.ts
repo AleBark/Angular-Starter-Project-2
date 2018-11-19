@@ -27,11 +27,10 @@ export class HomeComponent implements OnInit {
       (offers: Array<Offer>) => {
       this.offers = offers;
       console.log(this.offers);
-    },
-    (somethingWrongHere: any) => {
+    })
+    .catch((somethingWrongHere: any) => {
       console.log(somethingWrongHere);
     });
-
     }
 
   }
